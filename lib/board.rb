@@ -12,7 +12,11 @@ class Board
 
   # Return true if a shape is added to a non-empty cell (valid move), otherwise return false (invalid move).
   def add(shape, row, column)
-    if @grid[row][column] != "-"
+    if row < 0 || row > @grid.count
+      return false
+    elsif column < 0 || column > @grid[0].count
+      return false
+    elsif @grid[row][column] != "-"
       return false
     end
     @grid[row][column] = shape
@@ -30,6 +34,7 @@ class Board
     return true
   end
 
+  # Expects a character string representing the shape on the board. E.g. 'O' or 'X'
   def check_win_condition(shape)
     return check_horizontal_win?(shape) || check_vertical_win?(shape) || check_diagonal_win?(shape)
   end

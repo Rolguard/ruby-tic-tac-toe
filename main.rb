@@ -38,12 +38,12 @@ def main()
   shape_to_full_name = {"O" => :noughts, "X" => :crosses}
   board = Board.new
   current_player = player_1
-  game_finished = false
+  game_over = false
   player_has_won = false
   drawn_game = false
   valid_move = false
-  # Change condition to game_finished
-  while !game_finished
+
+  while !game_over
     begin
       board.display
       while !valid_move
@@ -68,11 +68,11 @@ def main()
     drawn_game = board.check_draw_condition()
 
     if player_has_won || drawn_game
-      game_finished = true
+      game_over = true
     end
     # Need to check the draw condition as well.
 
-    if !game_finished
+    if !game_over
       # Switch the player turns
       current_player == player_1 ? current_player = player_2 : current_player = player_1
       valid_move = false
