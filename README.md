@@ -5,5 +5,6 @@ Requires Ruby installed.
 Clone this repository and run it on your CLI:
 ```
 git clone https://github.com/Rolguard/ruby-tic-tac-toe.git
+cd ruby-tic-tac-toe
 ruby main.rb
 ```
