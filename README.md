@@ -1,4 +1,7 @@
 # Tic-Tac-Toe
+<img src="https://github.com/user-attachments/assets/cf8fe549-a0db-4e78-a315-50e7016fa5fc" width=200>
+
+
 The iconic [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe) 2-player game on the command-line interface (CLI) using object-oriented programming in Ruby. 
 Requires Ruby installed.
 
